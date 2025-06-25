@@ -1,4 +1,3 @@
-/* Estilos gerais do body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,14 +9,13 @@ body {
     background-attachment: fixed;
 }
 
-/* Cabeçalho */
+
 header {
     background-color: black;
     color: #fff;
     padding: 20px 0;
 }
 
-/* Navegação principal */
 nav {
     display: flex;
     justify-content: space-between;
@@ -27,14 +25,12 @@ nav {
     padding: 0 20px;
 }
 
-/* Ícone do menu (para mobile) */
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
-    display: none; /* Esconde no desktop */
+    display: none;
 }
 
-/* Lista do menu de navegação */
 .menu {
     list-style-type: none;
     padding: 0;
@@ -43,19 +39,16 @@ nav {
     position: relative;
 }
 
-/* Itens do menu */
 .menu li {
     margin-right: 20px;
     position: relative;
 }
 
-/* Links do menu */
 .menu li a {
     text-decoration: none;
     color: #fff;
 }
 
-/* Efeito de hover no menu */
 .menu li::before {
     content: "";
     position: absolute;
@@ -64,14 +57,13 @@ nav {
     bottom: -2px;
     left: 0;
     background-color: red;
-    transition: width 1s ease;
+    transition: width 0.3s ease;
 }
 
 .menu li:hover::before {
     width: 100%;
 }
 
-/* Conteúdo principal */
 main {
     max-width: 1000px;
     margin: 20px auto;
@@ -79,7 +71,6 @@ main {
     text-align: center;
 }
 
-/* Cartão padrão */
 .card {
     background-color: #f0f0f0;
     border-radius: 10px;
@@ -87,7 +78,6 @@ main {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Cartão alternativo */
 .card1 {
     background-color: #f0f0f0;
     border-radius: 10px;
@@ -96,7 +86,18 @@ main {
     margin: 10px;
 }
 
-/* Listas de opções */
+.card1 img,
+.fundo12 {
+    width: 100%;
+    height: 180px;
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 8px;
+    object-fit: cover;
+    background: #fff;
+}
+
+
 .op1{
     list-style-type: none;
     padding: 0px;
@@ -109,98 +110,121 @@ main {
     padding: 0px;
     margin: 0px;
     display: flex;
+
 }
 
-/* Rodapé */
+
 footer {
     background-color: black;
     color: #fff;
-    padding: 10px 0;
+    padding: 30px 0 10px 0;
     text-align: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
-/* Container genérico */
-.container{
-    position: relative;
-}
-
-/* Imagem de fundo (meio da tela) */
-.fundo{
-    width: 50%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Imagem de fundo (full width) */
-.fundo1{
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Imagem de fundo principal */
-.fundo12{
-    max-width: 100%;
-    width: 1200px;
-    height: 675;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Seções do rodapé */
 .footer-section {
-    display: inline-block;
-    margin: 0 20px;
-    vertical-align: top;
-    width: 30%;
-    margin-bottom: 20px;
+    flex: 1 1 250px;
+    max-width: 320px;
+    margin: 0 10px 20px 10px;
+    text-align: left;
+    border-radius: 8px;
+    padding: 10px 20px;
 }
 
-/* Título das seções do rodapé */
-.footer-section h3{
-    margin-bottom: 5px;
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #ff5252;
 }
 
-/* Fundo do site */
-.fundosite{
-    width: 100%;
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Scrollbar personalizada */
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-section ul li a:hover {
+    color: #ff5252;
+}
+
+@media (max-width: 900px) {
+    .footer-section {
+        flex: 1 1 45%;
+        max-width: 90%;
+        text-align: center;
+    }
+    footer {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 20px 0 10px 0;
+    }
+    .footer-section {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin: 0 0 20px 0;
+        text-align: center;
+    }
+}
+
 ::-webkit-scrollbar {
     width: 12px;
-}
-::-webkit-scrollbar-thumb {
+  }
+  
+  ::-webkit-scrollbar-thumb {
     background-color: green; 
-}
-::-webkit-scrollbar {
+  }
+  
+
+  ::-webkit-scrollbar {
     width: 12px;
     background-color: #f1f1f1; 
-}
-
-/* Relógio digital */
-.clock {
+  }
+  
+  .clock {
     background-color: #333;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-.time {
+  }
+  
+  .time {
     color: #fff;
     font-size: 2rem;
-}
+  }
 
-/* Carrossel de imagens */
-.carousel-container {
+  .carousel-container {
     position: relative;
     width: 100%;
     margin: auto;
     overflow: hidden; 
 }
+
 .carousel-wrapper {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+
 .slide {
     min-width: 100%;
     box-sizing: border-box;
@@ -208,111 +232,72 @@ footer {
     text-align: center;
     background-color: #eee;
 }
+
+.slide img {
+    width: 100%;
+    height: 400px; /* Altura fixa maior para desktop */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .slide img {
+        height: 200px; /* Altura fixa maior para mobile */
+        object-fit: cover;
+    }
+}
+
 #prevBtn {
     left: 1px;
 }
+
 #nextBtn {
     right: 1px;
 }
 
-/* Responsividade para telas até 768px */
 @media screen and (max-width: 768px) {
     .slide {
-        padding: 10px;
-    }
-    button {
-        font-size: 14px;
+        padding: 0px;
     }
 }
 
-/* Responsividade para telas até 1024px */
-@media (max-width: 1024px) {
-    main {
-        max-width: 98%;
-        padding: 0 5px;
-    }
-    .fundo12 {
-        width: 100%;
-        min-width: 0;
-    }
-}
-
-/* Responsividade para telas até 768px */
 @media (max-width: 768px) {
-    header, footer {
-        padding: 10px 0;
-    }
-
-    .card, .card1 {
-        padding: 10px;
-        font-size: 15px;
-    }
-
-    .footer-section {
-        width: 100%;
-        margin: 10px 0;
-        display: block;
-    }
-
-    .carousel-container {
-        width: 100%;
-    }
-
-    .fundo, .fundo1, .fundosite, .fundo12 {
-        width: 100%;
-        min-width: 0;
-        height: auto;
-    }
-
-    main {
-        padding: 0 2px;
-    }
-}
-
-/* Responsividade para telas até 480px (celulares) */
-@media (max-width: 480px) {
-    nav {
-        flex-direction: column;
-        padding: 0 5px;
-    }
-
-    .menu {
-        top: 40px;
-        padding: 5px;
-    }
-
-    .card, .card1 {
-        font-size: 13px;
-        padding: 5px;
-    }
-
-    .time {
-        font-size: 1.2rem;
-    }
-
-    /* Mostra o ícone do menu no mobile */
     .menu-icon {
         display: block;
     }
 
-    /* Esconde o menu tradicional no mobile */
     .menu {
         display: none;
         flex-direction: column;
-        background: #111;
         position: absolute;
-        top: 60px; /* ajuste conforme seu header */
+        top: 70px; /* Aumente este valor para descer o menu */
         left: 0;
-        width: 100%;
-        z-index: 100;
+        right: 0;
+        background-color: black;
+        padding: 10px;
     }
 
-    /* Exibe o menu quando ativo (adicione/remova a classe .active via JS) */
-    .menu.active {
+    .op{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+
+    .brchato{
+        display: none;
+    }
+
+    ul.show-menu {
         display: flex;
     }
 
-    nav {
-        position: relative;
+    ul li {
+        margin: 10px 0;
+    }
+
+    .menu li:hover::before {
+        width: 20%;
     }
 }
