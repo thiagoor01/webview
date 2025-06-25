@@ -1,4 +1,6 @@
+/* Definições gerais do body */
 body {
+    /* Fonte, margens, preenchimento e fundo */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -10,12 +12,14 @@ body {
 }
 
 
+/* Estilização do cabeçalho */
 header {
     background-color: black;
     color: #fff;
     padding: 20px 0;
 }
 
+/* Estilização da barra de navegação */
 nav {
     display: flex;
     justify-content: space-between;
@@ -25,12 +29,14 @@ nav {
     padding: 0 20px;
 }
 
+/* Ícone do menu para mobile */
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
     display: none;
 }
 
+/* Lista do menu principal */
 .menu {
     list-style-type: none;
     padding: 0;
@@ -39,16 +45,19 @@ nav {
     position: relative;
 }
 
+/* Itens do menu */
 .menu li {
     margin-right: 20px;
     position: relative;
 }
 
+/* Links do menu */
 .menu li a {
     text-decoration: none;
     color: #fff;
 }
 
+/* Linha animada abaixo do item do menu ao passar o mouse */
 .menu li::before {
     content: "";
     position: absolute;
@@ -60,10 +69,12 @@ nav {
     transition: width 0.3s ease;
 }
 
+/* Animação da linha ao passar o mouse */
 .menu li:hover::before {
     width: 100%;
 }
 
+/* Conteúdo principal */
 main {
     max-width: 1000px;
     margin: 20px auto;
@@ -71,6 +82,7 @@ main {
     text-align: center;
 }
 
+/* Cartão de conteúdo */
 .card {
     background-color: #f0f0f0;
     border-radius: 10px;
@@ -78,6 +90,7 @@ main {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Cartão de conteúdo alternativo */
 .card1 {
     background-color: #f0f0f0;
     border-radius: 10px;
@@ -86,6 +99,7 @@ main {
     margin: 10px;
 }
 
+/* Imagens dos cartões */
 .card1 img,
 .fundo12 {
     width: 100%;
@@ -97,7 +111,7 @@ main {
     background: #fff;
 }
 
-
+/* Listas de opções */
 .op1{
     list-style-type: none;
     padding: 0px;
@@ -114,6 +128,7 @@ main {
 }
 
 
+/* Estilização do rodapé */
 footer {
     background-color: black;
     color: #fff;
@@ -126,6 +141,7 @@ footer {
     gap: 30px;
 }
 
+/* Seções do rodapé */
 .footer-section {
     flex: 1 1 250px;
     max-width: 320px;
@@ -135,32 +151,38 @@ footer {
     padding: 10px 20px;
 }
 
+/* Títulos das seções do rodapé */
 .footer-section h3 {
     margin-bottom: 10px;
     font-size: 1.2em;
     color: #ff5252;
 }
 
+/* Listas do rodapé */
 .footer-section ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+/* Itens das listas do rodapé */
 .footer-section ul li {
     margin-bottom: 8px;
 }
 
+/* Links das listas do rodapé */
 .footer-section ul li a {
     color: #fff;
     text-decoration: none;
     transition: color 0.2s;
 }
 
+/* Efeito hover nos links do rodapé */
 .footer-section ul li a:hover {
     color: #ff5252;
 }
 
+/* Responsividade para telas menores que 900px */
 @media (max-width: 900px) {
     .footer-section {
         flex: 1 1 45%;
@@ -172,6 +194,7 @@ footer {
     }
 }
 
+/* Responsividade para telas menores que 600px */
 @media (max-width: 600px) {
     footer {
         flex-direction: column;
@@ -187,6 +210,7 @@ footer {
     }
 }
 
+/* Estilização da barra de rolagem */
 ::-webkit-scrollbar {
     width: 12px;
   }
@@ -201,6 +225,7 @@ footer {
     background-color: #f1f1f1; 
   }
   
+  /* Estilo do relógio */
   .clock {
     background-color: #333;
     padding: 10px;
@@ -213,6 +238,7 @@ footer {
     font-size: 2rem;
   }
 
+  /* Container do carrossel de imagens */
   .carousel-container {
     position: relative;
     width: 100%;
@@ -248,20 +274,24 @@ footer {
     }
 }
 
+/* Botão anterior do carrossel */
 #prevBtn {
     left: 1px;
 }
 
+/* Botão próximo do carrossel */
 #nextBtn {
     right: 1px;
 }
 
+/* Ajuste de padding do slide para telas menores */
 @media screen and (max-width: 768px) {
     .slide {
         padding: 0px;
     }
 }
 
+/* Responsividade do menu para telas menores */
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
@@ -271,7 +301,7 @@ footer {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px; /* Aumente este valor para descer o menu */
+        top: 70px; 
         left: 0;
         right: 0;
         background-color: black;
