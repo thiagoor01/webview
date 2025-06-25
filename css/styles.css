@@ -31,7 +31,7 @@ nav {
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
-    display: none;
+    display: none; /* Esconde no desktop */
 }
 
 /* Lista do menu de navegação */
@@ -288,3 +288,31 @@ footer {
 
     .time {
         font-size: 1.2rem;
+    }
+
+    /* Mostra o ícone do menu no mobile */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Esconde o menu tradicional no mobile */
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 60px; /* ajuste conforme seu header */
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    /* Exibe o menu quando ativo (adicione/remova a classe .active via JS) */
+    .menu.active {
+        display: flex;
+    }
+
+    nav {
+        position: relative;
+    }
+}
