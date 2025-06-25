@@ -114,33 +114,41 @@ footer {
     position: relative;
 }
 
-.fundo{
-    width: 50%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-.fundo1{
+.fundo, .fundo1, .fundo12, .fundosite {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-.fundo12{
     max-width: 100%;
-    width: 1200px;
-    height: 675;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+.card, .card1 {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+
+.op, .op1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.card1 {
+    flex: 1 1 300px;
+    max-width: 350px;
+    min-width: 220px;
+}
 
 .footer-section {
-    display: inline-block;
-    margin: 0 20px;
-    vertical-align: top;
-    width: 30%;
-    margin-bottom: 20px;
+    width: 100%;
+    margin: 10px 0;
+    display: block;
 }
 
 .footer-section h3{
@@ -186,7 +194,7 @@ footer {
 
 .carousel-wrapper {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 
 .slide {
@@ -216,101 +224,69 @@ button {
 
 @media screen and (max-width: 768px) {
     .slide {
-        padding: 10px;
-    }
-
-    button {
-        font-size: 14px;
+        min-width: 100%;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 900px) {
+    main {
+        max-width: 100%;
+        padding: 0 5px;
+    }
+    .carousel-container {
+        padding: 0;
+    }
+}
 
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
     }
-
     .menu {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 50px;
+        top: 70px;
         left: 0;
         right: 0;
         background-color: black;
-        padding: 10px;
+        padding: 20px;
+        z-index: 1000;
     }
-
-    .op{
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: block;
-    }
-
-    .brchato{
-        display: none;
-    }
-
     ul.show-menu {
         display: flex;
     }
-
-    ul li {
+    .op, .op1 {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .card1 {
+        max-width: 100%;
+    }
+    .footer-section {
+        width: 100%;
         margin: 10px 0;
     }
-
-    .menu li:hover::before {
-        width: 20%;
+    .slide {
+        padding: 5px;
     }
+    .clock {
+        font-size: 1rem;
+        padding: 5px;
+    }
+}
 
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    .card, .card1 {
+        padding: 10px;
+    }
+    .slide {
+        font-size: 14px;
+    }
+    .footer-section h3 {
+        font-size: 1rem;
+    }
 }
