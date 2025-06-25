@@ -1,3 +1,4 @@
+/* Define o estilo geral do corpo da página, como fonte, margens, preenchimento, sombra do texto e cor de fundo */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,13 +10,14 @@ body {
     background-attachment: fixed;
 }
 
-
+/* Estiliza o cabeçalho, colocando fundo preto e deixando o texto invisível (provavelmente para usar logo ou imagem) */
 header {
     background-color: black;
-    color: #fff;
+    color: transparent;
     padding: 20px 0;
 }
 
+/* Deixa o menu de navegação centralizado, espaçado e alinhado bonitinho */
 nav {
     display: flex;
     justify-content: space-between;
@@ -25,12 +27,14 @@ nav {
     padding: 0 20px;
 }
 
+/* Ícone do menu (hambúrguer), só aparece em telas pequenas */
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
     display: none;
 }
 
+/* Estilo da lista do menu principal, tira marcadores e deixa os itens em linha */
 .menu {
     list-style-type: none;
     padding: 0;
@@ -39,16 +43,19 @@ nav {
     position: relative;
 }
 
+/* Cada item do menu tem um espacinho do lado e posição relativa pra usar o ::before */
 .menu li {
     margin-right: 20px;
     position: relative;
 }
 
+/* Links do menu ficam sem sublinhado e com cor branca */
 .menu li a {
     text-decoration: none;
     color: #fff;
 }
 
+/* Linha animada que aparece embaixo do item do menu quando passa o mouse */
 .menu li::before {
     content: "";
     position: absolute;
@@ -56,14 +63,16 @@ nav {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: green;
+    background-color: red;
     transition: width 0.3s ease;
 }
 
+/* Quando passa o mouse, a linha cresce até o tamanho do item */
 .menu li:hover::before {
     width: 100%;
 }
 
+/* Área principal do site, centraliza e limita a largura do conteúdo */
 main {
     max-width: 1000px;
     margin: 20px auto;
@@ -71,6 +80,7 @@ main {
     text-align: center;
 }
 
+/* Cartão de conteúdo, com fundo claro, bordas arredondadas e sombra */
 .card {
     background-color: #f0f0f0;
     border-radius: 10px;
@@ -78,6 +88,7 @@ main {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Outro tipo de cartão, praticamente igual ao anterior, mas com margem extra */
 .card1 {
     background-color: #f0f0f0;
     border-radius: 10px;
@@ -86,23 +97,24 @@ main {
     margin: 10px;
 }
 
-
-.op1{
+/* Lista de opções, tira marcadores e deixa os itens em linha */
+.op1 {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
     display: flex;
 }
 
-.op{
+/* Mesma ideia da op1, só que com outro nome (talvez pra separar estilos) */
+.op {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
     display: flex;
-
+    
 }
 
-
+/* Rodapé do site, fundo preto, texto branco e centralizado */
 footer {
     background-color: black;
     color: #fff;
@@ -110,10 +122,12 @@ footer {
     text-align: center;
 }
 
-.container{
+/* Container genérico pra posicionar elementos de forma relativa */
+.container {
     position: relative;
 }
 
+/* Estilo para imagens de fundo, deixa elas responsivas e com borda arredondada e sombra */
 .fundo, .fundo1, .fundo12, .fundosite {
     width: 100%;
     max-width: 100%;
@@ -122,12 +136,14 @@ footer {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Cartões ocupam toda a largura disponível e respeitam o box-sizing */
 .card, .card1 {
     width: 100%;
     box-sizing: border-box;
     margin: 10px 0;
 }
 
+/* Listas de opções ficam em linha, com espaçamento e centralizadas */
 .op, .op1 {
     display: flex;
     flex-wrap: wrap;
@@ -139,64 +155,76 @@ footer {
     list-style-type: none;
 }
 
+/* Cartão responsivo, cresce ou diminui conforme o espaço, com largura máxima e mínima */
 .card1 {
     flex: 1 1 300px;
     max-width: 350px;
     min-width: 220px;
 }
 
+/* Seção do rodapé ocupa toda a largura e tem margem */
 .footer-section {
     width: 100%;
     margin: 10px 0;
     display: block;
 }
 
-.footer-section h3{
+/* Título do rodapé com espaçamento embaixo */
+.footer-section h3 {
     margin-bottom: 5px;
 }
 
-.fundosite{
+/* Imagem de fundo do site ocupa toda a largura */
+.fundosite {
     width: 100%;
 }
 
+/* Personaliza a barra de rolagem (scrollbar) no Chrome e navegadores baseados em Webkit */
 ::-webkit-scrollbar {
     width: 12px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: green; 
-  }
-  
+    background-color: #f1f1f1;
+}
 
-  ::-webkit-scrollbar {
+/* Cor da barrinha que você arrasta na scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: red;
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar {
     width: 12px;
-    background-color: #f1f1f1; 
-  }
-  
-  .clock {
+    background-color: #f1f1f1;
+}
+
+/* Relógio digital, fundo escuro, arredondado e com sombra */
+.clock {
     background-color: #333;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .time {
+}
+
+/* Estilo do texto do relógio, branco e grande */
+.time {
     color: #fff;
     font-size: 2rem;
-  }
+}
 
-  .carousel-container {
+/* Container do carrossel de slides, esconde overflow e centraliza */
+.carousel-container {
     position: relative;
     width: 100%;
     margin: auto;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
+/* Wrapper dos slides, faz eles ficarem lado a lado e anima a transição */
 .carousel-wrapper {
     display: flex;
     transition: transform 1s ease-in-out;
 }
 
+/* Cada slide ocupa toda a largura, tem padding e fundo claro */
 .slide {
     min-width: 100%;
     box-sizing: border-box;
@@ -205,6 +233,7 @@ footer {
     background-color: #eee;
 }
 
+/* Botões do carrossel, ficam posicionados no meio verticalmente */
 button {
     position: absolute;
     top: 50%;
@@ -214,20 +243,24 @@ button {
     cursor: pointer;
 }
 
+/* Botão de voltar do carrossel, fica à esquerda */
 #prevBtn {
     left: 1px;
 }
 
+/* Botão de avançar do carrossel, fica à direita */
 #nextBtn {
     right: 1px;
 }
 
+/* Responsividade: em telas menores que 768px, cada slide ocupa 100% */
 @media screen and (max-width: 768px) {
     .slide {
         min-width: 100%;
     }
 }
 
+/* Responsividade: em telas menores que 900px, main ocupa toda a largura e carrossel perde padding */
 @media (max-width: 900px) {
     main {
         max-width: 100%;
@@ -238,6 +271,7 @@ button {
     }
 }
 
+/* Responsividade: em telas menores que 768px, menu vira coluna, aparece ícone, cartões e rodapé se adaptam */
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
@@ -276,6 +310,7 @@ button {
     }
 }
 
+/* Responsividade: em telas bem pequenas, diminui fonte e padding dos cartões e slides */
 @media (max-width: 480px) {
     body {
         font-size: 14px;
